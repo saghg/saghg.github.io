@@ -5,35 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Portfolio</title>
+	<title>Andrew Astafev Frontend Developer</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/images/logo-min.svg" type="image/logo-min">
 	<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 	<!-- http://riccardozanutta.com/ взять какие-тоэлементы на заметку -->
 
 	<!-- Change log soon -->
 	<!-- 
-		/*фиксануть градиент кнопки*/
-		/*фиксануть кнопку works в хедере*/
-		/* доделать popup окно для кнопки в хедере и для работ*/
+		/* доделать popup окно для кнопки для работ*/
 	-->
 
-	<header class="header">
+	<header id="head" class="header">
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="header__logo"><a href="#"><img src="images/logo-min.svg" alt="logo"></a></div>
 				<nav class="nav">
 					<a class="nav__link" href="#">About</a>
-					<a class="nav__link" href="#">Works</a>
-					<a class="nav__link" href="#">Contacts</a>
+					<a class="nav__link" href="#works">Works</a>
+					<a class="nav__link" href="#conct">Contacts</a>
 				</nav>
 			</div>
 		</div>
@@ -48,12 +47,65 @@
 					<button>About me</button>
 				</div>
 			</div>
-			<div class="works__btn">
-				<a href="#works">Works</a>
-			</div>
 		</div>
 	</section>
-
+	<div class="modal__header" style="display: none;">
+		<div class="container">
+			<div class="modal__wrapper">
+				<div class="close__btn">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="modal__text">
+					<h3>About me</h3>
+					<h6>Front-end developer.</h6>
+					<p>I'm Andrew Astafev, a 19-year old Russian <span> Freelance(lol) Front-end developer</span>.
+						I strive to become a highly qualified developer and do my best for this.
+					</p>
+					<p>
+						<span>Skills</span>:
+					<div class="skills">
+						<img class="icon i1" src="images/html5.svg" alt="">
+						<img class="icon i2" src="images/css-3.svg" alt="">
+						<img class="icon i3" src="images/bootstrap-fill (1).svg" alt="">
+						<img class="icon i4" src="images/js.svg" alt="">
+						<img class="icon i5" src="images/jquery.svg" alt="">
+					</div>
+					</p>
+					<p>
+						What am I <span>studying now</span>:
+					<div class="studying">
+						<img class="icon i6" src="images/git.svg" alt="">
+						<img class="icon i7" src="images/react.svg" alt="">
+					</div>
+					</p>
+				</div>
+				<div class="modal__inputs">
+					<div class="modal__inputs-text">
+						Contact with me
+					</div>
+					<form id="input__form"
+						action="https://getsimpleform.com/messages?form_api_token=331d294c02283f321ca94317112fb345" method="post">
+						<input type='hidden' name='redirect_to' value='https://servwer.github.io/' />
+						<div class="input">
+							<input type="text" class="name__input inputs" placeholder="" name="name" required />
+							<label class="label">Name</label>
+						</div>
+						<div class="input">
+							<input type='mail' class="mail__input inputs" placeholder="" name='mail' required />
+							<label class="label">E-mail</label>
+						</div>
+						<div class="input">
+							<textarea style="resize: none;" name="message" placeholder="" class="message__input inputs" cols="50"
+								rows="2" required></textarea>
+							<label class="label message__label">Message</label>
+						</div>
+						<input type='submit' value='Send Message' class="button__form" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<section id="works" class="works">
 		<div class="container">
@@ -68,31 +120,55 @@
 						<h5>All you will need to do in production is just snap them on the window</h5>
 					</div>
 					<div class="works__item-btn">
-						<button class="btn">View the work</button>
+						<a href="http://a90265or.beget.tech/">View the work</ф>
 					</div>
+					<!-- <div class="hidden__item__block">
+						<div class="slider__wrapper">
+							<img src="" alt="" class="slider__item">
+							<img src="" alt="" class="slider__item">
+							<img src="" alt="" class="slider__item">
+						</div>
+						<div class="hidden__text">
+							<h3>AldikaTechno</h3>
+							<h5>All you will need to do in production is just snap them on the window</h5>
+						</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
+
+
 	</section>
 
-	<section class="contacts">
+	<!-- <div class="works__modal">
+		<div class="container">
+			<div class="works__modal-wrapper">
+				<div class="works__wrapper-text">
+					<h1>AldikaTechno</h1>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<section id="conct" class="contacts">
 		<div class="container">
 			<div class="contacts__wrapper">
 				<div class="contact__logo"><a href="#"><img src="images/logo-min.svg" alt=""></a></div>
 				<div class="contact__socials">
 					<ul>
-						<li><a href="#">Telegram</a></li>
-						<li><a href="#">Linkedin</a></li>
-						<li><a href="#">Github</a></li>
-						<li><a href="#">Instagram</a></li>
-						
+						<li><a href="https://t.me/vangSaghG" target="blank">Telegram</a></li>
+						<li><a href="https://www.linkedin.com/in/andrew-astafev-a76313201/" target="blank">Linkedin</a></li>
+						<li><a href="https://github.com/servwer" target="blank">Github</a></li>
+						<li><a href="https://www.instagram.com/m3rzost/" target="blank">Instagram</a></li>
+
 					</ul>
 				</div>
 				<div class="copyright">© 2021 Andrew Astafev - <span> <a href="mailto:iviris@bk.ru">Contact</a></span></div>
 			</div>
 		</div>
 	</section>
-
+	<p style="margin-left: 0px;" id="back-top"><a href="#head"><span></span>UP</a></p>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
